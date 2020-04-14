@@ -6,8 +6,8 @@
 
  From the command line do:
 ```shell
-$ git clone https://github.com/RicardoSabinolrs/python-gcp-pubsub.git
-$ cd python-gcp-pubsub/
+$ git clone https://github.com/RicardoSabinolrs/python-google-cloud-pubsub.git
+$ cd python-google-cloud-pubsub/
 $ pipenv install
 $ pipenv shell
 ```
