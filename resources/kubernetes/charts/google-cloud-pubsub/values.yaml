@@ -1,0 +1,18 @@
+replicaCount: 1
+image:
+  repository: sabinolab/google_cloud_pubsub
+  tag: v2
+  pullPolicy: IfNotPresent
+limits:
+  cpu: 150m
+  memory: 200M
+requests:
+  cpu: 100m
+  memory: 150M
+environment:
+  maxByesPerBatch: 1024
+  maxMessagesPerBatch: 100
+  maxLatencyToPublish: 2
+  topicName: test
+  topicProject: dataplatform-nonprd
+  totalReplication: 100
