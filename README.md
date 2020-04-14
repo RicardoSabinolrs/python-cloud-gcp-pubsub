@@ -1,4 +1,4 @@
-## This demonstrates how to send messages using Google Cloud Pub/Sub.
+## This demonstrates how to send/receive messages using Google Cloud Pub/Sub.
 
 #### Running locally
 
