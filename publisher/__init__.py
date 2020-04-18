@@ -1,1 +1,1 @@
-from .publisher import Publisher
+from .topic import Publisher

@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 
-from publisher.publisher import Publisher
+from publisher.topic import Publisher
 from utils import get_logger, file
 
 LOGGER = get_logger(__name__)
