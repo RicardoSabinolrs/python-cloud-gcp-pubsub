@@ -11,7 +11,7 @@ services:
       MAX_MESSAGES_PER_BATCH: '100'
       MAX_LATENCY_TO_PUBLISH: '2'
       TOPIC_NAME: 'test'
-      TOPIC_PROJECT_ID: 'dataplatform-nonprd'
+      TOPIC_PROJECT_ID: 'my-project'
       TOTAL_REPLICATION: 20
     env_file:
       - ../../.env

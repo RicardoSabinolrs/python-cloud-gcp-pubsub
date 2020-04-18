@@ -103,7 +103,7 @@ class Subscription(metaclass=MementoMetaclass):
 
         LOGGER.debug("Subscription updated: {}".format(subscription_path))
         LOGGER.debug("New endpoint for subscription is: {}".format(result.push_config))
-        self.ubscriber.close()
+        self.subscriber.close()
 
     def receive_messages(self, subscription_name, timeout=None):
         """Receives messages from a pull subscription."""
@@ -167,7 +167,6 @@ class Subscription(metaclass=MementoMetaclass):
                 streaming_pull_future.cancel()
 
     def receive_messages_with_flow_control(self, subscription_name, timeout=None):
-
         subscription_path = self.subscriber.subscription_path(
             project_id,
             subscription_name
@@ -179,7 +178,6 @@ class Subscription(metaclass=MementoMetaclass):
 
         # Limit the subscriber to only have ten outstanding messages at a time.
         flow_control = pubsub_v1.types.FlowControl(max_messages=10)
-
         streaming_pull_future = self.subscriber.subscribe(
             subscription_path,
             callback=callback,
@@ -234,7 +232,6 @@ class Subscription(metaclass=MementoMetaclass):
         NUM_MESSAGES = 2
         ACK_DEADLINE = 30
         SLEEP_TIME = 10
-
         # The subscriber pulls a specific number of messages.
         response = self.subscriber.pull(subscription_path, max_messages=NUM_MESSAGES)
 
