@@ -1,0 +1,12 @@
+# IntelliJ
+out/
+.idea/
+.idea_modules/
+
+# CMake
+cmake-build-*/
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
