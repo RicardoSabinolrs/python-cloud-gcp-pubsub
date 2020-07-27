@@ -3,7 +3,7 @@ from os import listdir
 from os.path import join
 
 
-def find_all_json_files_in_local_disk(local_folder='resources/data'):
+def find_all_json_files_in_local_disk(local_folder='data'):
     return [join(local_folder, file) for file in listdir(local_folder)]
 
 

@@ -1,0 +1,56 @@
+image:
+  repository: sabinolab/google_cloud_pubsub
+  tag: v2
+  pullPolicy: IfNotPresent
+limits:
+  cpu: 150m
+  memory: 200M
+requests:
+  cpu: 100m
+  memory: 150M
+environment:
+  maxByesPerBatch: 1024
+  maxMessagesPerBatch: 100
+  maxLatencyToPublish: 2
+  topicName: test
+  topicProject: dataplatform-nonprd
+  totalReplication: 100
+replicaCount: 1
+imagePullSecrets: []
+nameOverride: ""
+fullnameOverride: ""
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+podAnnotations: {}
+podSecurityContext: {}
+securityContext: {}
+service:
+  type: ClusterIP
+  port: 80
+ingress:
+  enabled: false
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    kubernetes.io/tls-acme: "true"
+  hosts:
+    - host: chart-example.local
+      paths: []
+  tls: []
+resources: {}
+  limits:
+    cpu: 100m
+    memory: 128Mi
+  requests:
+    cpu: 100m
+    memory: 128Mi
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+  targetMemoryUtilizationPercentage: 80
+nodeSelector: {}
+tolerations: []
+affinity: {}
