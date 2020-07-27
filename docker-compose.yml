@@ -5,20 +5,9 @@ services:
     build:
       dockerfile: Dockerfile
       context: ../../
-    environment:
-      GOOGLE_APPLICATION_CREDENTIALS: /var/.credentials/key.json
-      MAX_BYTES_PER_BATCH: '1024'
-      MAX_MESSAGES_PER_BATCH: '100'
-      MAX_LATENCY_TO_PUBLISH: '2'
-      TOPIC_NAME: 'test'
-      TOPIC_PROJECT_ID: 'my-project'
-      TOTAL_REPLICATION: 20
     env_file:
       - ../../.env
     volumes:
       - ${GOOGLE_APPLICATION_CREDENTIALS}:/var/.credentials/key.json
       - /resources/data:/app/resources/data
       - virtualenvs:/root/.local/share/virtualenvs
-
-volumes:
-  virtualenvs:
