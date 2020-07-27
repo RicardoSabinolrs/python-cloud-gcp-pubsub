@@ -4,10 +4,10 @@ services:
   google-cloud-pubsub:
     build:
       dockerfile: Dockerfile
-      context: ../../
+      context: .
     env_file:
-      - ../../.env
+      - .env
     volumes:
       - ${GOOGLE_APPLICATION_CREDENTIALS}:/var/.credentials/key.json
-      - /resources/data:/app/resources/data
+      - /data:/app/data
       - virtualenvs:/root/.local/share/virtualenvs
