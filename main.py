@@ -2,7 +2,9 @@
 
 from publisher.topic import Publisher
 from utils import get_logger, file
+from config import Configuration
 
+config = Configuration()
 LOGGER = get_logger(__name__)
 
 
@@ -21,6 +23,8 @@ def _get_event(file_name, local_folder='resources/data'):
 
 
 if __name__ == '__main__':
-    event_publisher = Publisher()
     events = _get_all_events()
+
+    event_publisher = Publisher()
+    topic_name = event_publisher.create_topic(config.application.topic_id)
     event_publisher.publish_messages_with_batch_settings(events)

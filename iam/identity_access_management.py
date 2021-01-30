@@ -11,7 +11,7 @@ class IdentityAccessManagement(metaclass=MementoMetaclass):
     def __init__(self):
         self.config = Configuration()
         self.project_id = self.config.application.project_id
-        self.topic_name = self.config.application.topic_name
+        self.topic_name = self.config.application.topic_id
         self.publisher = pubsub_v1.PublisherClient()
         self.subscriber = pubsub_v1.SubscriberClient()
 

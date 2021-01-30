@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: config-env
+data:
+  MAX_BYTES_PER_BATCH: "{{ .Values.environment.maxByesPerBatch }}"
+  MAX_MESSAGES_PER_BATCH: "{{ .Values.environment.maxMessagesPerBatch }}"
+  MAX_LATENCY_TO_PUBLISH: "{{ .Values.environment.maxLatencyToPublish }}"
+  TOPIC_ID: "{{ .Values.environment.topicId }}"
+  SUBSCRIPTION_ID: "{{ .Values.environment.subscriptionId }}"
+  ENDPOINT: "{{ .Values.environment.endpoint }}"
