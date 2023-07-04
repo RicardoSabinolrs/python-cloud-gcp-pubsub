@@ -5,7 +5,7 @@ from google import api_core
 from google.cloud import pubsub_v1
 from mementos import MementoMetaclass
 
-from utils import get_logger, Stopwatch
+from app.crosscutting.logging import get_logger, Stopwatch
 
 logger = get_logger(__name__)
 

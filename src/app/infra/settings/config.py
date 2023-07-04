@@ -1,7 +1,7 @@
 import os
 
 from munch import Munch
-from utils.singleton import Singleton
+from app.crosscutting.singleton import Singleton
 
 
 class Configuration(metaclass=Singleton):

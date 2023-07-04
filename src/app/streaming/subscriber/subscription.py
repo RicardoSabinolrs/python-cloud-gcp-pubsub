@@ -3,7 +3,7 @@ from concurrent.futures import TimeoutError
 from google.cloud import pubsub_v1
 from mementos import MementoMetaclass
 
-from utils import get_logger
+from app.crosscutting.utils import get_logger
 
 logger = get_logger(__name__)
 
